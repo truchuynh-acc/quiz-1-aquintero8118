@@ -15,11 +15,34 @@ Please fill in the blank
 #include <string>
 
 class Car {
-public:
+private:
     std::string model;
-    int year;
+    std::int year;
+    std::string color;
+public:
+    //car year getter and setter
+   int get_year (){
+        return year;
+    }
+    void set_year (std::int newyear){
+        year = newyear;
+    }
+    //car model getter and setter
+    string get_model (){
+        return model;
+    }
+    void set_model (std::string newmodel){
+        model = newmodel; 
+    }
+    //car color getter and setter
+    string get_color (){
+        return color;
+    }
+    void set_color (std::string newcolor){
+        color = newcolor;
+    }
 
-
+    //display car details
     void displayDetails() {
         std::cout << "Model: " << model << ", Year: " << year << ", Color: " << color << std::endl;
     }
@@ -27,7 +50,6 @@ public:
 
 int main() {
     Car myCar;
-
 
     myCar.displayDetails();
 
